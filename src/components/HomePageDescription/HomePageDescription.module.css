@@ -1,0 +1,23 @@
+/* .containerHome {
+  max-width: 1440px;
+  padding: 260px 64px;
+  height: 100vh;
+} */
+.homeTitle {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 0.67;
+  color: #f7f7f7;
+  text-align: left;
+  margin-bottom: 16px;
+}
+.homeText {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.33;
+  color: #f7f7f7;
+  text-align: left;
+  /* margin-bottom: 40px; */
+}
