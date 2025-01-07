@@ -13,33 +13,51 @@ const CamperCard = ({ camper }) => {
   // };
 
   return (
-    <li>
+    <li className={css.wrappCamperCard}>
       <img
+        className={css.imgCamperCard}
         src={camper.gallery[0].thumb}
         alt={camper.name}
         width={292}
         height={320}
       />
-      <h2>{camper.name}</h2>
-      <span>{`€${camper.price.toFixed(2)}`}</span>
-      <Icon
-        id="icon-heart-favorite"
-        width={26}
-        height={24}
-        role="button"
-        ariaLabel="Heart-favorite"
-      />
-      <ReviewInfo
-        reviews={camper.reviews}
-        rating={camper.rating}
-        location={camper.location}
-      />
-      <p>{camper.description}</p>
-      <CamperFeatures camper={camper} />
 
-      <Link to={`/catalog/${camper.id}`}>
-        <button type="button">Show more</button>
-      </Link>
+      <div className={css.descriptionCamperCard}>
+        <div className={css.mainTitleCamperCard}>
+          <div className={css.mainTitleCamperCardWrapp}>
+            <h2 className={css.titleCamperCard}>{camper.name}</h2>
+            <div className={css.favoriteCamperCard}>
+              <span className={css.priceCamperCard}>{`€${camper.price.toFixed(
+                2,
+              )}`}</span>
+              <Icon
+                className={css.iconFavorite}
+                id="icon-heart-favorite"
+                width={26}
+                height={24}
+                role="button"
+                // onClick={handleToggleFavorite}
+                ariaLabel="Heart-favorite"
+              />
+            </div>
+          </div>
+
+          <ReviewInfo
+            reviews={camper.reviews}
+            rating={camper.rating}
+            location={camper.location}
+          />
+        </div>
+
+        <p className={css.camperCardText}>{camper.description}</p>
+        <CamperFeatures camper={camper} />
+
+        <Link to={`/catalog/${camper.id}`}>
+          <button className={css.btnShowMore} type="button">
+            Show more
+          </button>
+        </Link>
+      </div>
     </li>
   );
 };

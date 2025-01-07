@@ -1,0 +1,85 @@
+.wrappCamperCard {
+  display: flex;
+  gap: 24px;
+  padding: 24px;
+  align-items: flex-start;
+  border-radius: 20px;
+  border: 1px solid #dadde1;
+  max-width: 888px;
+  background-color: #fff;
+}
+.imgCamperCard {
+  width: 292px;
+  height: 320px;
+  border-radius: 10px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.descriptionCamperCard {
+  display: flex;
+  flex-direction: column;
+  row-gap: 24px;
+}
+
+.mainTitleCamperCard {
+}
+
+.mainTitleCamperCardWrapp {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.titleCamperCard {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.33;
+  color: #101828;
+  margin-bottom: 8px;
+}
+
+.favoriteCamperCard {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.priceCamperCard {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.33;
+  color: #101828;
+}
+
+.camperCardText {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #475467;
+
+  white-space: nowrap; /* Текст в один рядок */
+  overflow: hidden; /* Ховає зайвий текст */
+  text-overflow: ellipsis; /* Додає ... в кінці */
+  max-width: 525px;
+}
+
+.btnShowMore {
+  display: block;
+  width: 166px;
+  height: 56px;
+  padding: 16px 40px;
+  border-radius: 200px;
+  background-color: var(--Button, #e44848);
+  border: none;
+
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: -0.01em;
+  color: #fff;
+}
