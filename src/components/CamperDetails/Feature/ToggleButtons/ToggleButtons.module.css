@@ -9,14 +9,13 @@
 }
 
 .toggleButtons {
-  border: none;
-  color: #101828;
   font-family: 'Inter', sans-serif;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 1.5;
-  background-color: var(--White);
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.2;
+  color: #101828;
+  border: none;
+  background-color: #fff;
   padding-bottom: 24px;
 }
 .toggleButtons.active {

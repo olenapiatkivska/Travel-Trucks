@@ -55,7 +55,11 @@ const CamperDetails = () => {
       <ToggleButtons active={isActiveBtn} handleClick={handleClickBtn} />
 
       <div className={css.camperDetailsBtn}>
-        {isActiveBtn.feature ? <Feature camper={camper} /> : <Reviews />}
+        {isActiveBtn.feature ? (
+          <Feature camper={camper} />
+        ) : (
+          <Reviews camper={camper} />
+        )}
       </div>
     </div>
   );

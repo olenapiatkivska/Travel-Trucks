@@ -1,0 +1,56 @@
+.reviewsArticle {
+  width: 631px;
+}
+.reviewsList {
+  display: flex;
+  flex-direction: column;
+  gap: 44px;
+}
+.reviewsItem {
+  display: flex;
+  width: 631px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.reviewsWrapp {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+.reviewsLetter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 60px;
+  background-color: #f2f4f7;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.33;
+  color: #e44848;
+}
+.reviewsContent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+}
+.reviewsComment {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #475467;
+}
+
+.starFilled {
+  fill: #ffc531;
+}
+.starEmpty {
+  fill: #f2f4f7;
+}
