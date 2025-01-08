@@ -1,0 +1,24 @@
+.toggleButtonsWrapp {
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 24px;
+  width: 100%;
+  background-color: #fff;
+  border-bottom: 1px solid #dadde1;
+  margin-bottom: 44px;
+}
+
+.toggleButtons {
+  border: none;
+  color: #101828;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5;
+  background-color: var(--White);
+  padding-bottom: 24px;
+}
+.toggleButtons.active {
+  border-bottom: 2px solid #e44848;
+}

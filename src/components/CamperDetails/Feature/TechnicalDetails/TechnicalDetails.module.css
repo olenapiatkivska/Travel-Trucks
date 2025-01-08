@@ -1,0 +1,41 @@
+.technicalDetailsWrapp {
+  width: 527px;
+}
+
+.technicalDetailsTitle {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.2;
+  color: #101828;
+  margin-bottom: 24px;
+}
+
+.hrLine {
+  border: none;
+  height: 1px;
+  background-color: #dadde1;
+  margin: 24px 0;
+}
+
+.technicalDetailsList {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.technicalDetailsItem {
+  display: flex;
+  justify-content: space-between;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: center;
+  color: #101828;
+}
+
+.technicalDetailsItemForm {
+  text-transform: capitalize;
+}

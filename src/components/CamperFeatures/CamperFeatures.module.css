@@ -9,7 +9,7 @@
   align-items: center;
   gap: 8px;
   border-radius: 100px;
-  background: var(--Badges, #f2f4f7);
+  background-color: #f2f4f7;
   mix-blend-mode: multiply;
 
   font-weight: 500;

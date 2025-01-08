@@ -1,0 +1,22 @@
+.detailsTitle {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.33;
+  color: #101828;
+  margin-bottom: 8px;
+}
+
+.detailsTitleContent {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.priceDetailsTitle {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.33;
+  color: #101828;
+}

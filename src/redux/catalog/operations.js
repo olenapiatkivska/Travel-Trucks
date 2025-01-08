@@ -30,8 +30,8 @@ export const fetchCamper = createAsyncThunk(
   'camper/fetchOne',
   async (camperId, thunkAPI) => {
     try {
-      // const { data } = await api.get('/campers', { camperId });
-      const { data } = await api.get(`/campers/${camperId}`);
+      const { data } = await api.get('/campers', { camperId });
+      // const { data } = await api.get(`/campers/${camperId}`);
 
       return data;
     } catch (error) {
