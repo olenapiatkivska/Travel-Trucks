@@ -1,0 +1,20 @@
+.filterFormBtn {
+  display: block;
+  width: 166px;
+  height: 56px;
+  padding: 16px 40px;
+  border-radius: 200px;
+  background-color: #e44848;
+  border: none;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: -0.01em;
+  color: #fff;
+  transition: background-color cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.filterFormBtn:hover {
+  background-color: #d84343;
+}

@@ -7,7 +7,7 @@ const CamperFeatures = ({ camper }) => {
       {camper.transmission && (
         <li className={css.itemCamperFeatures}>
           <Icon
-            id="icon-transmission"
+            id="transmission"
             width={20}
             height={20}
             ariaLabel="Transmission"
@@ -18,35 +18,35 @@ const CamperFeatures = ({ camper }) => {
 
       {camper.engine && (
         <li className={css.itemCamperFeatures}>
-          <Icon id="icon-engin" width={20} height={20} ariaLabel="Engine" />
+          <Icon id="engin" width={20} height={20} ariaLabel="Engine" />
           {camper.engine}
         </li>
       )}
 
       {camper.AC && (
         <li className={css.itemCamperFeatures}>
-          <Icon id="icon-wind" width={20} height={20} ariaLabel="AC" />
+          <Icon id="ac" width={20} height={20} ariaLabel="AC" />
           AC
         </li>
       )}
 
       {camper.kitchen && (
         <li className={css.itemCamperFeatures}>
-          <Icon id="icon-cup-hot" width={20} height={20} ariaLabel="Kitchen" />
+          <Icon id="kitchen" width={20} height={20} ariaLabel="Kitchen" />
           Kitchen
         </li>
       )}
 
       {camper.TV && (
         <li className={css.itemCamperFeatures}>
-          <Icon id="icon-tv" width={20} height={20} ariaLabel="TV" />
+          <Icon id="tv" width={20} height={20} ariaLabel="TV" />
           TV
         </li>
       )}
 
       {camper.bathroom && (
         <li className={css.itemCamperFeatures}>
-          <Icon id="icon-shower" width={20} height={20} ariaLabel="Bathroom" />
+          <Icon id="bathroom" width={20} height={20} ariaLabel="Bathroom" />
           Bathroom
         </li>
       )}

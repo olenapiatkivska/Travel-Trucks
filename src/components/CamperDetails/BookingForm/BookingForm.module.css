@@ -74,9 +74,13 @@
   letter-spacing: -0.01em;
   color: #fff;
   margin: 0 auto;
+  transition: background-color cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+.bookingFormBtn:hover {
+  background-color: #d84343;
 }
 
 .errorMessage {
-  color: red;
+  color: #d84343;
   font-size: 12px;
 }

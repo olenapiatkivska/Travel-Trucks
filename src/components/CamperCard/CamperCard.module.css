@@ -61,9 +61,9 @@
   line-height: 1.5;
   color: #475467;
 
-  white-space: nowrap; /* Текст в один рядок */
-  overflow: hidden; /* Ховає зайвий текст */
-  text-overflow: ellipsis; /* Додає ... в кінці */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
   max-width: 525px;
 }
 
@@ -73,13 +73,17 @@
   height: 56px;
   padding: 16px 40px;
   border-radius: 200px;
-  background-color: var(--Button, #e44848);
+  background-color: #e44848;
   border: none;
-
   font-family: 'Inter', sans-serif;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: -0.01em;
   color: #fff;
+  transition: background-color cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.btnShowMore:hover {
+  background-color: #d84343;
 }

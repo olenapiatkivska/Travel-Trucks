@@ -21,10 +21,6 @@ const BookingForm = () => {
     register('date', { required: 'Booking date is required' });
   }, [register]);
 
-  //   useEffect(() => {
-  //     reset();
-  //   }, [reset]);
-
   const onSubmit = data => {
     toast(`Thank you, ${data.name}! Your booking is confirmed.`, {
       position: 'top-center',

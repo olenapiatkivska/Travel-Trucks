@@ -1,4 +1,5 @@
 import Catalog from '../../components/Catalog.jsx';
+import Filter from '../../components/Filter/Filter.jsx';
 import Container from '../../shared/Container/Container.jsx';
 
 import css from './CatalogPage.module.css';
@@ -8,7 +9,7 @@ const CatalogPage = () => {
     <>
       <Container>
         <div className={css.catalogPageWrapp}>
-          <div>Filter</div>
+          <Filter />
           <Catalog />
         </div>
       </Container>
