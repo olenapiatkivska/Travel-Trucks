@@ -1,0 +1,82 @@
+.bookingFormWrapp {
+  border: 1px solid #dadde1;
+  border-radius: 10px;
+  padding: 44px;
+  width: 631px;
+}
+
+.bookingTitle {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.2;
+  color: #101828;
+  margin-bottom: 8px;
+}
+
+.bookingText {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #6c717b;
+  margin-bottom: 24px;
+}
+
+.bookingFormInputWrapp {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 24px;
+}
+
+.bookingFormInput {
+  width: 527px;
+  border-radius: 12px;
+  background-color: #f7f7f7;
+  padding: 18px 18px;
+  border: none;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #6c717b;
+}
+
+.bookingFormTextarea {
+  width: 527px;
+  height: 118px;
+  padding: 18px 308px 76px 18px;
+  border-radius: 12px;
+  background-color: #f7f7f7;
+  border: none;
+  resize: none;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #6c717b;
+}
+
+.bookingFormBtn {
+  display: block;
+  width: 166px;
+  padding: 16px 60px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 200px;
+  background-color: #e44848;
+  border: none;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: -0.01em;
+  color: #fff;
+  margin: 0 auto;
+}
+
+.errorMessage {
+  color: red;
+  font-size: 12px;
+}

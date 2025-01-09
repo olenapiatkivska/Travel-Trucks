@@ -18,3 +18,8 @@
   margin-top: 24px;
   margin-bottom: 44px;
 }
+
+.camperDetailsBtn {
+  display: flex;
+  gap: 40px;
+}

@@ -11,6 +11,7 @@ import Feature from './Feature/Feature.jsx';
 import css from './CamperDetails.module.css';
 import ToggleButtons from './Feature/ToggleButtons/ToggleButtons.jsx';
 import Reviews from './Reviews/Reviews.jsx';
+import BookingForm from './BookingForm/BookingForm.jsx';
 
 const CamperDetails = () => {
   const dispatch = useDispatch();
@@ -60,6 +61,7 @@ const CamperDetails = () => {
         ) : (
           <Reviews camper={camper} />
         )}
+        <BookingForm />
       </div>
     </div>
   );
