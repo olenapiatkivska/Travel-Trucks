@@ -19,7 +19,7 @@ const ReviewInfo = ({ rating, reviews, location }) => {
       </li>
 
       <li className={css.itemReviewInfo}>
-        <Icon id="icon-map" width={16} height={16} ariaLabel="Map" />
+        <Icon id="location" width={16} height={16} ariaLabel="Location" />
         <span className={css.locationReviewInfo}>{location}</span>
       </li>
     </ul>

@@ -1,3 +1,15 @@
+.notFoundMessage {
+  font-size: 24px;
+  color: red;
+  text-align: center;
+  margin: 32px 0;
+  font-weight: bold;
+  background-color: #ffe6e6;
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
 .camperDetailsWrapp {
   padding: 48px 0;
 }

@@ -36,7 +36,7 @@ const CamperDetails = () => {
   };
 
   if (!camper) {
-    return <Loader />;
+    return <p className={css.notFoundMessage}>Camper not found</p>;
   }
 
   return (

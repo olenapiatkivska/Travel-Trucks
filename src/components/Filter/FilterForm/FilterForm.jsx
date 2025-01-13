@@ -37,15 +37,21 @@ const FilterForm = () => {
     dispatch(fetchCampers(filters));
   };
 
-  //  const iconColor =
-  //    watch('location').trim() === '' ? 'emptyInput' : 'fillInInput';
+  const iconColor =
+    watch('location').trim() === '' ? 'emptyInput' : 'fillInInput';
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
-      <div>
+      <div className={css.locationWrapp}>
         <p className={css.locationTitle}>Location</p>
-        <label>
-          <Icon id="icon-map" width={20} height={20} ariaLabel="Map" />
+        <label className={css.locationLabel}>
+          <Icon
+            className={`${css.locationIcon} ${css[iconColor]}`}
+            id="location"
+            width={20}
+            height={20}
+            ariaLabel="Location"
+          />
           <Controller
             name="location"
             control={control}
@@ -61,7 +67,7 @@ const FilterForm = () => {
         </label>
       </div>
 
-      <div>
+      <div className={css.filtersWrapp}>
         <p className={css.filtersTitle}>Filters</p>
         <Controller
           name="equipment"

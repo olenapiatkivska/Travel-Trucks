@@ -1,3 +1,64 @@
+.locationWrapp {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 40px;
+}
+
+.locationTitle {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #6c717b;
+}
+
+.locationInput {
+  position: relative;
+  display: flex;
+  width: 360px;
+  height: 56px;
+  padding: 18px 20px 18px 46px;
+  border-radius: 12px;
+  background-color: #f7f7f7;
+  border: none;
+}
+
+.locationLabel {
+  position: relative;
+  display: inline-block;
+}
+
+.locationIcon {
+  position: absolute;
+  top: 18px;
+  left: 20px;
+  z-index: 99999;
+}
+
+.locationIcon.emptyInput {
+  fill: #dadde1;
+}
+
+.locationIcon.fillInInput {
+  fill: #101828;
+}
+
+.filtersWrapp {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  margin-bottom: 40px;
+}
+
+.filtersTitle {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.2;
+  color: #101828;
+}
+
 .filterFormBtn {
   display: block;
   width: 166px;

@@ -86,8 +86,3 @@ npm run build
 - **Email**: olena.piatkivska@gmail.com
 - **GitHub**: olenapiatkivska
 - **LinkedIn**: https://www.linkedin.com/in/olena-piatkivska/
-
----
-
-Дякуємо за використання TravelTrucks! Якщо у вас виникли питання або пропозиції,
-зв'яжіться зі мною за вказаними контактами.
