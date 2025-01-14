@@ -34,13 +34,44 @@
   width: 527px;
   border-radius: 12px;
   background-color: #f7f7f7;
-  padding: 18px 18px;
+  padding: 18px;
   border: none;
   font-family: 'Inter', sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.5;
   color: #6c717b;
+}
+
+.bookingFormInput.dateSelected {
+  color: #101828;
+  font-family: Inter;
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+.bookingFormInputDouble {
+  display: flex;
+  flex-direction: column;
+  width: 527px;
+  position: relative;
+}
+
+.datePickerWrapper {
+  position: relative;
+  width: 100%;
+}
+
+.react-datepicker-wrapper {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+}
+.bookingFormTextarea {
+  margin-top: 14px;
 }
 
 .bookingFormTextarea {
@@ -55,6 +86,10 @@
   font-weight: 400;
   font-size: 16px;
   line-height: 1.5;
+  color: #101828;
+}
+
+.bookingFormTextarea::placeholder {
   color: #6c717b;
 }
 

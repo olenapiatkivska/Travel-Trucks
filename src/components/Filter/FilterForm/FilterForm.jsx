@@ -13,7 +13,7 @@ const FilterForm = () => {
 
   const { handleSubmit, control, watch } = useForm({
     defaultValues: {
-      location: 'Kyiv, Ukraine',
+      location: '',
       equipment: {
         Transmission: false,
         AC: false,

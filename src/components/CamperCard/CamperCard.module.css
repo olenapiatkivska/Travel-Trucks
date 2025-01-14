@@ -22,9 +22,6 @@
   row-gap: 24px;
 }
 
-.mainTitleCamperCard {
-}
-
 .mainTitleCamperCardWrapp {
   display: flex;
   align-items: center;
@@ -38,6 +35,23 @@
   line-height: 1.33;
   color: #101828;
   margin-bottom: 8px;
+}
+
+.favoriteLink {
+  display: flex;
+  align-items: center;
+  transition: all #101828;
+}
+
+.favorited,
+.favoriteLink:hover,
+.favoriteLink:focus-visible {
+  color: #e44848;
+}
+
+.iconHeart {
+  width: 24px;
+  height: 24px;
 }
 
 .favoriteCamperCard {

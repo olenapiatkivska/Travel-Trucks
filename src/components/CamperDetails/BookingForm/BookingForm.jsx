@@ -64,26 +64,32 @@ const BookingForm = () => {
           {errors.email && (
             <p className={css.errorMessage}>{errors.email.message}</p>
           )}
+          <div className={css.bookingFormInputDouble}>
+            <div className={css.datePickerWrapper}>
+              <DatePicker
+                // className={css.bookingFormInput}
+                className={`${css.bookingFormInput} ${
+                  startDate ? css.dateSelected : ''
+                }`} // Додаємо клас для обраної дати
+                selected={startDate}
+                onChange={date => {
+                  setStartDate(date);
+                  setValue('date', date, { shouldValidate: true });
+                }}
+                placeholderText="Booking date*"
+                dateFormat="dd.MM.yyyy"
+              />
+              {errors.date && (
+                <p className={css.errorMessage}>{errors.date.message}</p>
+              )}
+            </div>
 
-          <DatePicker
-            className={css.bookingFormInput}
-            selected={startDate}
-            onChange={date => {
-              setStartDate(date);
-              setValue('date', date, { shouldValidate: true });
-            }}
-            placeholderText="Booking date*"
-            dateFormat="dd.MM.yyyy"
-          />
-          {errors.date && (
-            <p className={css.errorMessage}>{errors.date.message}</p>
-          )}
-
-          <textarea
-            {...register('comment')}
-            placeholder="Comment"
-            className={css.bookingFormTextarea}
-          ></textarea>
+            <textarea
+              {...register('comment')}
+              placeholder="Comment"
+              className={css.bookingFormTextarea}
+            ></textarea>
+          </div>
         </div>
 
         <button className={css.bookingFormBtn} type="submit">

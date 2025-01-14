@@ -12,23 +12,19 @@ import {
   PURGE,
   REGISTER,
 } from 'redux-persist';
+import { favoriteReducer } from './favorites/slice.js';
 
-// const persistFavoriteConfig = {
-//   key: 'favorite',
-//   storage,
-//   whitelist: ['items'],
-// };
-
-// const persistedFavoritesReducer = persistReducer(
-//   persistFavoriteConfig,
-//   favoritesReducer,
-// );
+const persistFavoriteConfig = {
+  key: 'favorite',
+  storage,
+  whitelist: ['items'],
+};
 
 export const store = configureStore({
   reducer: {
     campers: campersReducer,
     filters: filtersReducer,
-    // favorite: persistedFavoritesReducer,
+    favorite: persistReducer(persistFavoriteConfig, favoriteReducer),
   },
   middleware: getDefaultMiddleware =>
     getDefaultMiddleware({

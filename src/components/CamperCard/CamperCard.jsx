@@ -1,16 +1,23 @@
-import { useDispatch } from 'react-redux';
-import Icon from '../../shared/Icons/Icon.jsx';
-import CamperFeatures from '../CamperFeatures/CamperFeatures.jsx';
+import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
+import { FaRegHeart } from 'react-icons/fa';
+import clsx from 'clsx';
+import CamperFeatures from '../CamperFeatures/CamperFeatures.jsx';
 import ReviewInfo from '../ReviewInfo/ReviewInfo.jsx';
+import { selectFavorites } from '../../redux/favorites/selectors.js';
+import { toggleFavorite } from '../../redux/favorites/slice.js';
 
 import css from './CamperCard.module.css';
 
 const CamperCard = ({ camper }) => {
-  // const dispatch = useDispatch();
-  // const handleToggleFavorite = () => {
-  //   dispatch(toggleFavorite(camper.id));
-  // };
+  const dispatch = useDispatch();
+  const favorites = useSelector(selectFavorites);
+  const isFavorite = favorites.includes(camper.id);
+
+  const handleFavorite = event => {
+    event.preventDefault();
+    dispatch(toggleFavorite(camper.id));
+  };
 
   return (
     <div className={css.wrappCamperCard}>
@@ -30,15 +37,16 @@ const CamperCard = ({ camper }) => {
               <span className={css.priceCamperCard}>{`€${camper.price.toFixed(
                 2,
               )}`}</span>
-              <Icon
-                className={css.iconFavorite}
-                id="icon-heart-favorite"
-                width={26}
-                height={24}
-                role="button"
-                // onClick={handleToggleFavorite}
-                ariaLabel="Heart-favorite"
-              />
+
+              <a
+                className={clsx(css.favoriteLink, {
+                  [css.favorited]: isFavorite,
+                })}
+                href="#"
+                onClick={handleFavorite}
+              >
+                <FaRegHeart className={css.iconHeart} />
+              </a>
             </div>
           </div>
 
