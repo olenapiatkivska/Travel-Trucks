@@ -1,10 +1,19 @@
 import { useForm } from 'react-hook-form';
+import { yupResolver } from '@hookform/resolvers/yup';
+import * as yup from 'yup';
 import { useEffect, useState } from 'react';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import css from './BookingForm.module.css';
+
+const validationSchema = yup.object().shape({
+  name: yup.string().required('Name is required'),
+  email: yup.string().email('Invalid email').required('Email is required'),
+  date: yup.date().nullable().required('Booking date is required'),
+  comment: yup.string(),
+});
 
 const BookingForm = () => {
   const {
@@ -13,7 +22,9 @@ const BookingForm = () => {
     setValue,
     reset,
     formState: { errors },
-  } = useForm();
+  } = useForm({
+    resolver: yupResolver(validationSchema),
+  });
 
   const [startDate, setStartDate] = useState(null);
 
@@ -43,7 +54,7 @@ const BookingForm = () => {
         <div className={css.bookingFormInputWrapp}>
           <input
             className={css.bookingFormInput}
-            {...register('name', { required: 'Name is required' })}
+            {...register('name')}
             placeholder="Name*"
           />
           {errors.name && (
@@ -52,13 +63,7 @@ const BookingForm = () => {
 
           <input
             className={css.bookingFormInput}
-            {...register('email', {
-              required: 'Email is required',
-              pattern: {
-                value: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
-                message: 'Enter a valid email',
-              },
-            })}
+            {...register('email')}
             placeholder="Email*"
           />
           {errors.email && (
@@ -67,10 +72,9 @@ const BookingForm = () => {
           <div className={css.bookingFormInputDouble}>
             <div className={css.datePickerWrapper}>
               <DatePicker
-                // className={css.bookingFormInput}
                 className={`${css.bookingFormInput} ${
                   startDate ? css.dateSelected : ''
-                }`} // Додаємо клас для обраної дати
+                }`}
                 selected={startDate}
                 onChange={date => {
                   setStartDate(date);

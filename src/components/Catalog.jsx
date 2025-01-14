@@ -5,10 +5,11 @@ import {
   selectError,
 } from '../redux/catalog/selectors.js';
 import { useEffect } from 'react';
-// import { resetItems } from '../redux/catalog/slice.js';
+import { resetItems } from '../redux/catalog/slice.js';
 import { fetchCampers } from '../redux/catalog/operations.js';
 import Loader from './Loader/Loader.jsx';
 import CatalogList from './CatalogList/CatalogList.jsx';
+import { selectFilters } from '../redux/filters/selectors.js';
 
 const Catalog = () => {
   const dispatch = useDispatch();
@@ -16,12 +17,15 @@ const Catalog = () => {
   const campers = useSelector(selectCampers);
   const loading = useSelector(selectLoading);
   const error = useSelector(selectError);
-
-  // const filters = useSelector(selectFilters);
+  const filters = useSelector(selectFilters);
 
   useEffect(() => {
-    if ((!campers || campers.length === 0) && error === null) {
-      //   dispatch(resetItems());
+    if (
+      (!campers || campers.length === 0) &&
+      error === null &&
+      Object.keys(filters).length === 0
+    ) {
+      dispatch(resetItems());
       dispatch(fetchCampers());
     }
   }, [dispatch, campers, error]);

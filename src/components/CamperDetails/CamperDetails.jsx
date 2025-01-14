@@ -4,14 +4,12 @@ import { selectCamperById } from '../../redux/catalog/selectors.js';
 import { useParams } from 'react-router-dom';
 import { fetchCamper } from '../../redux/catalog/operations.js';
 import { useEffect, useState } from 'react';
-import Loader from '../Loader/Loader.jsx';
 import DetailsTitle from './DetailsTitle/DetailsTitle.jsx';
 import Feature from './Feature/Feature.jsx';
-
-import css from './CamperDetails.module.css';
 import ToggleButtons from './Feature/ToggleButtons/ToggleButtons.jsx';
 import Reviews from './Reviews/Reviews.jsx';
 import BookingForm from './BookingForm/BookingForm.jsx';
+import css from './CamperDetails.module.css';
 
 const CamperDetails = () => {
   const dispatch = useDispatch();

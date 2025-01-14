@@ -4,3 +4,15 @@
   row-gap: 32px;
   width: 888px;
 }
+
+.notFoundCamper {
+  font-size: 24px;
+  color: rgb(242, 63, 63);
+  text-align: center;
+  margin: 32px 0;
+  font-weight: bold;
+  background-color: rgba(215, 213, 213, 0.414);
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
