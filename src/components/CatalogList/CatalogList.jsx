@@ -30,8 +30,8 @@ const CatalogList = ({ campers }) => {
   return (
     <section>
       {error !== null ? (
-        <div>
-          <p className={css.notFoundCamper}>Camper not found</p>;
+        <div className={css.notFoundCamperWrapp}>
+          <p className={css.notFoundCamper}>Camper not found</p>
         </div>
       ) : (
         <ul className={css.catalogList}>
