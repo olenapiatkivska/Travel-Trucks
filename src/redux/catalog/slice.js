@@ -38,6 +38,6 @@ const campersSlice = createSlice({
   },
 });
 
-export const { resetItems, toggleFavorite } = campersSlice.actions;
+export const { toggleFavorite } = campersSlice.actions;
 
 export const campersReducer = campersSlice.reducer;
